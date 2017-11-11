@@ -41,6 +41,27 @@ For example: 5! = 1 * 2 * 3 * 4 * 5 = 120 */
 	factorialize(5);
 
 
+## Find the Longest Word in a String
+
+/* Return the length of the longest word in the provided sentence.
+Your response should be a number. 
+
+TESTS
+findLongestWordLength("The quick brown fox jumped over the lazy dog") should return a number.
+findLongestWordLength("The quick brown fox jumped over the lazy dog") should return 6. */
+
+	function findLongestWordLength(str) {
+		var arr = str.split(" ");
+		arr.sort(function(a, b){return b.length-a.length});
+		return arr.shift().length;
+	}
+
+	findLongestWordLength("The quick brown fox jumped over the lazy dog");
+
+
+
+
+
 
 
 
