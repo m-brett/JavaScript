@@ -82,6 +82,23 @@ largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -1
 	largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
 
 
+## Confirm the Ending
+
+/*Check if a string (first argument, str) ends with the given target string (second argument, target). Do not use the built-in method .endsWith() to solve the challenge.
+
+TESTS
+confirmEnding("Bastian", "n")should return true.
+confirmEnding("Congratulation", "on") should return true.
+confirmEnding("Connor", "n")should return false.
+confirmEnding("Walking on water and developing software from a specification are easy if both are frozen", "specification") should return false. */
+
+	function confirmEnding(str, target) {
+      str.substr(-target.length) == target ? return true : return false;
+	}
+
+	confirmEnding("Walking on water and developing software from a specification are easy if both are frozen", "specification");
+
+
 
 
 
