@@ -1,3 +1,5 @@
+# Solutions for FCC Beta Basic Algorithm Scripting Challenges 
+
 ## Convert Celsius to Fahrenheit
 
 /* The algorithm to convert from Celsius to Fahrenheit is the temperature in Celsius times 9/5, plus 32.
@@ -121,6 +123,55 @@ repeatStringNumTimes("abc", -2) should return "". */
 	}
 
 	repeatStringNumTimes("abc", 3);
+
+
+## Truncate a String
+
+/* Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with a ... ending.
+
+Note that inserting the three dots to the end will add to the string length.
+However, if the given maximum string length num is less than or equal to 3, then the addition of the three dots does not add to the string length in determining the truncated string.
+
+TESTS
+truncateString("A-tisket a-tasket A green and yellow basket", 11) should return "A-tisket...".
+truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length) should return "A-tisket a-tasket A green and yellow basket".
+truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2) should return "A-tisket a-tasket A green and yellow basket"
+truncateString("A-", 1) should return "A...".
+truncateString("Absolutely Longer", 2) should return "Ab...".*/
+
+	function truncateString(str, num) {
+		var word = "";
+		if ((num == str.length) || (num > str.length)){
+			word = str;
+		} else if (num <= 3){
+			word = str.slice(0, num) + "...";
+		} else if (num < str.length){
+			word = str.slice(0, num-3) + "...";
+		}
+	  return word;
+	}
+
+	truncateString("Peter Piper picked a peck of pickled peppers", 14);
+
+
+	
+	
+## Finders Keepers
+
+/* Create a function that looks through an array (first argument) and returns the first element in the array that passes a truth test (second argument). If no element passes the test, return undefined.
+
+TESTS
+findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; }) should return 8.
+findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; }) should return undefined.*/
+
+	function findElement(arr, func) {
+	  var num = 0;
+	  return num;
+	}
+
+	findElement([1, 2, 3, 4], function(num){ return num % 2 === 0; });
+
+
 
 
 
