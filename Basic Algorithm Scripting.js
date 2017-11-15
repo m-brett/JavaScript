@@ -1,5 +1,7 @@
 # Solutions for FCC Beta Basic Algorithm Scripting Challenges 
 
+
+
 ## Convert Celsius to Fahrenheit
 
 /* The algorithm to convert from Celsius to Fahrenheit is the temperature in Celsius times 9/5, plus 32.
@@ -12,6 +14,8 @@ You are given a variable celsius representing a temperature in Celsius. Use the 
 	convertToF(30);
 
 
+
+
 ## Reverse a String
 
 /* Reverse the provided string.
@@ -22,6 +26,8 @@ You may need to turn the string into an array before you can reverse it. */
 	}
 
 	reverseString("hello");
+
+
 
 
 ## Basic Algorithm Scripting: Factorialize a Number
@@ -43,6 +49,8 @@ For example: 5! = 1 * 2 * 3 * 4 * 5 = 120 */
 	factorialize(5);
 
 
+
+
 ## Find the Longest Word in a String
 
 /* Return the length of the longest word in the provided sentence.
@@ -59,6 +67,8 @@ findLongestWordLength("The quick brown fox jumped over the lazy dog") should ret
 	}
 
 	findLongestWordLength("The quick brown fox jumped over the lazy dog");
+
+
 
 
 ## Return Largest Numbers in Arrays
@@ -84,6 +94,8 @@ largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -1
 	largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
 
 
+
+
 ## Confirm the Ending
 
 /*Check if a string (first argument, str) ends with the given target string (second argument, target). Do not use the built-in method .endsWith() to solve the challenge.
@@ -95,10 +107,12 @@ confirmEnding("Connor", "n")should return false.
 confirmEnding("Walking on water and developing software from a specification are easy if both are frozen", "specification") should return false. */
 
 	function confirmEnding(str, target) {
-      str.substr(-target.length) == target ? return true : return false;
+      return str.substr(-target.length) == target ? true : false;
 	}
 
 	confirmEnding("Walking on water and developing software from a specification are easy if both are frozen", "specification");
+
+
 
 
 ## Basic Algorithm Scripting: Repeat a String Repeat a String
@@ -123,6 +137,8 @@ repeatStringNumTimes("abc", -2) should return "". */
 	}
 
 	repeatStringNumTimes("abc", 3);
+
+ 
 
 
 ## Truncate a String
@@ -164,11 +180,41 @@ TESTS
 findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; }) should return 8.
 findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; }) should return undefined.*/
 
+
 	function findElement(arr, func) {
 	  return arr.filter(func)[0];
 	}
 
 	findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; });
+
+
+
+## Boo who
+
+
+/*Check if a value is classified as a boolean primitive. Return true or false.
+Boolean primitives are true and false.
+
+TESTS
+booWho(true) should return true.
+booWho(false) should return true.
+booWho([1, 2, 3]) should return false.
+booWho([].slice) should return false.
+booWho({ "a": 1 }) should return false.
+booWho(1) should return false.
+booWho(NaN) should return false.
+booWho("a") should return false.
+booWho("true") should return false.
+booWho("false") should return false. */
+
+
+	function booWho(bool) {
+  		return typeof bool === 'boolean' ? true : false;
+	}
+
+	booWho(false);
+
+
 
 
 
