@@ -253,16 +253,97 @@ bouncer([false, null, 0, NaN, undefined, ""]) should return [].
 bouncer([1, null, NaN, 2, undefined]) should return [1, 2]. */
 
 	function bouncer(arr) {
-	  // Don't show a false ID to this bouncer.
+  		var truth = arr.filter(function(type){
+    	if (Boolean(type)) return type;
+		});
+  		return truth;
+	}
+
+bouncer([7, "ate", "", false, 9]);
+
+
+
+## Where do I Belong
+
+/*Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted. The returned value should be a number.
+For example, getIndexToIns([1,2,3,4], 1.5)should return 1 because it is greater than 1(index 0), but less than 2 (index 1).
+Likewise, getIndexToIns([20,3,5], 19)should return 2 because once the array has been sorted it will look like [3,5,20] and 19 is less than 20 (index 2) and greater than 5(index 1).
+
+getIndexToIns([10, 20, 30, 40, 50], 35) should return 3.
+getIndexToIns([10, 20, 30, 40, 50], 35) should return a number.
+getIndexToIns([10, 20, 30, 40, 50], 30) should return 2.
+getIndexToIns([10, 20, 30, 40, 50], 30) should return a number.
+getIndexToIns([40, 60], 50)should return 1.
+getIndexToIns([40, 60], 50)should return a number.
+getIndexToIns([3, 10, 5], 3)should return 0.
+getIndexToIns([3, 10, 5], 3)should return a number.
+getIndexToIns([5, 3, 20, 3], 5) should return 2.
+getIndexToIns([5, 3, 20, 3], 5) should return a number.
+getIndexToIns([2, 20, 10], 19) should return 2.
+getIndexToIns([2, 20, 10], 19) should return a number.
+getIndexToIns([2, 5, 10], 15)should return 3.
+getIndexToIns([2, 5, 10], 15)should return a number.
+getIndexToIns([], 1) should return 0.
+getIndexToIns([], 1) should return a number.*/
+
+
+	function getIndexToIns(arr, num) {
+	  // Find my place in this sorted array.
+	  return num;
+	}
+
+	getIndexToIns([40, 60], 50);
+
+
+
+
+## Mutations
+
+/*Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array.
+For example, ["hello", "Hello"], should return true because all of the letters in the second string are present in the first, ignoring case.
+The arguments ["hello", "hey"] should return false because the string "hello" does not contain a "y".
+Lastly, ["Alien", "line"], should return true because all of the letters in "line" are present in "Alien".
+
+TESTS
+mutation(["hello", "hey"])should return false.
+mutation(["hello", "Hello"])should return true.
+mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]) should return true.
+mutation(["Mary", "Army"])should return true.
+mutation(["Mary", "Aarmy"])should return true.
+mutation(["Alien", "line"])should return true.
+mutation(["floor", "for"])should return true.
+mutation(["hello", "neo"])should return false.
+mutation(["voodoo", "no"])should return false.*/
+
+
+	function mutation(arr) {
 	  return arr;
 	}
 
-	bouncer([7, "ate", "", false, 9]);
+	mutation(["hello", "hey"]);
 
 
 
+## Chunky Monkey
+
+/*Write a function that splits an array (first argument) into groups the length of size(second argument) and returns them as a two-dimensional array.
+
+TESTS
+chunkArrayInGroups(["a", "b", "c", "d"], 2) should return [["a", "b"], ["c", "d"]].
+chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3) should return [[0, 1, 2], [3, 4, 5]].
+chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2) should return [[0, 1], [2, 3], [4, 5]].
+chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4) should return [[0, 1, 2, 3], [4, 5]].
+chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3) should return [[0, 1, 2], [3, 4, 5], [6]].
+chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4) should return [[0, 1, 2, 3], [4, 5, 6, 7], [8]].
+chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2) should return [[0, 1], [2, 3], [4, 5], [6, 7], [8]]*/
 
 
+	function chunkArrayInGroups(arr, size) {
+	  // Break it up.
+	  return arr;
+	}
+
+	chunkArrayInGroups(["a", "b", "c", "d"], 2);
 
 
 
