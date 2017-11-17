@@ -287,12 +287,23 @@ getIndexToIns([], 1) should return 0.
 getIndexToIns([], 1) should return a number.*/
 
 
-	function getIndexToIns(arr, num) {
-	  // Find my place in this sorted array.
-	  return num;
-	}
 
-	getIndexToIns([40, 60], 50);
+function getIndexToIns(arr, num) {
+  var position;
+  var sorted = arr.sort((a, b) => {return a-b; });
+  
+  for (var i = 0; i<sorted.length; i++){
+         if (sorted[i] >= num) {
+			 return (position = i);
+		 } else {
+			 position = sorted.length;
+		 }
+     }
+  return position;
+}
+
+
+getIndexToIns([2, 20, 10], 19);
 
 
 
