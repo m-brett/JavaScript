@@ -372,6 +372,15 @@ chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2) should return [[0, 1], [2, 3]
 
 
 
+	function chunkArrayInGroups(arr, size) {
+		var final = [];
+		while (arr.length > 0) {
+			final.push(arr.splice(0, size));
+		}
+	 	return final;
+	}
+
+	chunkArrayInGroups(["a", "b", "c", "d"], 2);
 
 
 
