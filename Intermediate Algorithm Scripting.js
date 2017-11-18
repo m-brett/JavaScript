@@ -51,13 +51,22 @@ diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]) should return an array.
 [1, "calf", 3, "piglet"], [7, "filly"] should return [1, "calf", 3, "piglet", 7, "filly"].
 [1, "calf", 3, "piglet"], [7, "filly"] should return an array with six items. */
 
+
 	function diffArray(arr1, arr2) {
-	  var newArr = [];
-	  // Same, same; but different.
-	  return newArr;
+	  var newArr = arr1.concat(arr2).sort();
+
+	  for (var i = newArr.length; i >= 0; i--){
+		if (newArr[i] == newArr[i-1]){
+		  newArr.splice(i-1, 2);
+		}
+	  }
+
+	 return newArr;
 	}
 
+
 	diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+
 
 
 
