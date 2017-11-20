@@ -122,8 +122,13 @@ destroyer(["possum", "trollo", 12, "safari", "hotdog", 92, 65, "grandma", "bugat
 
 
 	function destroyer(arr) {
-	  // Remove all the values
-	  return arr;
+  		var args = Array.from(arguments);
+ 
+  		var filtered = args[0].filter(function(elem){
+			return elem != args[1] && elem != args[2] && elem != args[3];
+		});
+     
+  		return filtered;
 	}
 
 	destroyer([1, 2, 3, 1, 2, 3], 2, 3);
