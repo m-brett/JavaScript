@@ -173,12 +173,14 @@ spinalCase("Teletubbies say Eh-oh") should return "teletubbies-say-eh-oh".
 spinalCase("AllThe-small Things") should return "all-the-small-things". */
 
 	function spinalCase(str) {
-	  // "It's such a fine line between stupid, and clever."
-	  // --David St. Hubbins
-	  return str;
+  
+  		var spaces = str.split(/(?=[A-Z])/).join(" ").replace(/_/g, " ");
+  		var lower = spaces.toLowerCase().replace(/_| +/g, "-");
+   
+  		return lower;
 	}
 
-	spinalCase('This Is Spinal Tap');
+	spinalCase("Teletubbies say Eh-oh");
 
 
 
